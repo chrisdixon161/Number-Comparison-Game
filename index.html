@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Number Match Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="welcome">
+    <h3>Welcome to the <em>Number Match</em> game...</h3>
+    <em>The rules are simple. </em>
+    <p>A random image and number will be generated</p>
+    <p>If the number on the screen matches the number of items on the random picture, hit the thumbs up!</p>
+    <p>If they are different, hit thumbs down!</p>
+    <p>You have <span id="timeSetting"></span> seconds to decide!</p>
+  </div>
+  <button id="play-button" onclick="play()">
+    <strong>Play!</strong>
+  </button>
+  <h3 id="message"></h3>
+
+  <div id="game-area">
+    <h3 id="score">Score: <span id="currentScore"></span> / <span id="totalAvailable"></span></h3>
+    <img>
+    <p>How many <span id="item-name"></span>?</p>
+    <div class="match-buttons">
+      <button onClick="match()">&#x1F44D;</button>
+      <p id="number"></p>
+      <button onClick="noMatch()">&#x1F44E;</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
